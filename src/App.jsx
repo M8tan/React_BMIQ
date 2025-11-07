@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Calculator from "./Calculator.jsx"
 import BMIResult from "./BMIResult.jsx"
+import Title from "./Title.jsx"
 import "./App.css"
 
 
@@ -29,6 +30,7 @@ const Reset_BMI = () => {
     
   return(
     <>
+    <Title></Title>
       <Calculator onCalculate={Calculate_BMI} onReset = {Reset_BMI}/>
       {BMI && <BMIResult BMI={BMI} Message={Message} />}
       
