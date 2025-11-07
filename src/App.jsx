@@ -10,8 +10,8 @@ function App() {
   const [Message, Set_Message] = useState("")
   const Calculate_BMI = (Weight, Height) => {
     if (!Weight || !Height){
-      Set_Message("Enter yout details please :)");
       Set_BMI(null)
+      Set_Message("Enter yout details please :)");
       return;
     }
   const MeterHeight = Height / 100;
@@ -22,6 +22,8 @@ function App() {
   else if (BMIValue < 30) Set_Message("High")
   else Set_Message("Fatass")
   }
+
+  
   
 const Reset_BMI = () => {
   Set_BMI(null)

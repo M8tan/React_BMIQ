@@ -41,6 +41,7 @@ header {
   width: 100px;
   text-align: right;
   font-size: 0.95rem;
+  font-size: 16px;
 }
 .input-group input {
   flex: 1;
@@ -88,6 +89,26 @@ header {
   background-color: #c0392b;
     color: #f78585;
 
+}
+
+.result{
+  width: fit-content;
+  margin: auto;
+}
+
+.result p{
+  font-weight: bold;
+  font-size: 20px;
+}
+.Genderz{
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: flex-start; /* left align with inputs */
+}
+.Genderz label{
+  margin: 5px;
 }
 
 /* Small-screen friendly */

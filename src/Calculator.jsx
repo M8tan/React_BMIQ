@@ -18,6 +18,14 @@ function Calculator( {onCalculate, onReset}){
         
         <form id="Calculator_Form" className="bmi-card" onSubmit={HandleSubmit}>
             <div className="Inputz">
+                <div className="Genderz">
+                <label>I am a:
+                <label><input type="radio" name="gender" value="male"></input>Male</label>
+                <label><input type="radio" name="gender" value="male"></input>Female</label>
+                <label><input type="radio" name="gender" value="male"></input>Else</label>
+                </label>
+                </div>
+                
                 <div className="input-group">
                     <label>Weight (KG)</label>
                     <input type="number" value={Weight} onChange={(e) => Set_Weight(e.target.value)} placeholder="70"></input>
