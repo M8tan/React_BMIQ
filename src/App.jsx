@@ -18,10 +18,10 @@ function App() {
   const MeterHeight = Height / 100;
   const BMIValue = (Weight / (MeterHeight * MeterHeight)).toFixed(1);
   Set_BMI(BMIValue);
-  if (BMIValue < 18.5) {Set_Message("Low"); Set_Color("Green");}
+  if (BMIValue < 18.5) {Set_Message("Low"); Set_Color("Blue");}
   else if (BMIValue < 25) {Set_Message("Fine"); Set_Color("Green");}
-  else if (BMIValue < 30) {Set_Message("High"); Set_Color("Green");}
-  else {Set_Message("Fatass"); Set_Color("Green");}
+  else if (BMIValue < 30) {Set_Message("High"); Set_Color("Orange");}
+  else {Set_Message("Fatass"); Set_Color("Red");}
   }
 
   
@@ -36,7 +36,7 @@ const Reset_BMI = () => {
     <>
     <Title></Title>
       <Calculator onCalculate={Calculate_BMI} onReset = {Reset_BMI}/>
-      {BMI && <BMIResult BMI={BMI} Message={Message} Color={Color}/>}
+      {Message && <BMIResult BMI={BMI} Message={Message} Color={Color}/>}
       
     </>
   )
