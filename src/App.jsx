@@ -8,6 +8,7 @@ import "./App.css"
 function App() {
   const [BMI, Set_BMI] = useState(null)
   const [Message, Set_Message] = useState("")
+  const [Color, Set_Color] = useState("")
   const Calculate_BMI = (Weight, Height) => {
     if (!Weight || !Height){
       Set_BMI(null)
@@ -17,24 +18,25 @@ function App() {
   const MeterHeight = Height / 100;
   const BMIValue = (Weight / (MeterHeight * MeterHeight)).toFixed(1);
   Set_BMI(BMIValue);
-  if (BMIValue < 18.5) Set_Message("Low")
-  else if (BMIValue < 25) Set_Message("Fine")
-  else if (BMIValue < 30) Set_Message("High")
-  else Set_Message("Fatass")
+  if (BMIValue < 18.5) {Set_Message("Low"); Set_Color("Green");}
+  else if (BMIValue < 25) {Set_Message("Fine"); Set_Color("Green");}
+  else if (BMIValue < 30) {Set_Message("High"); Set_Color("Green");}
+  else {Set_Message("Fatass"); Set_Color("Green");}
   }
 
   
   
 const Reset_BMI = () => {
-  Set_BMI(null)
-  Set_Message("")
+  Set_BMI(null);
+  Set_Message("");
+  Set_Color("");
 }
     
   return(
     <>
     <Title></Title>
       <Calculator onCalculate={Calculate_BMI} onReset = {Reset_BMI}/>
-      {BMI && <BMIResult BMI={BMI} Message={Message} />}
+      {BMI && <BMIResult BMI={BMI} Message={Message} Color={Color}/>}
       
     </>
   )

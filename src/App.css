@@ -13,7 +13,7 @@ body {
   max-width: 300px;
   margin: 80px auto;
   padding: 2rem;
-  background: #ffffff;
+  background: #ccbcbc;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -96,6 +96,7 @@ body {
 .result{
   width: fit-content;
   margin: auto;
+  color: #ccc;
 }
 
 .result p{

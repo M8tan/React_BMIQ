@@ -1,8 +1,8 @@
-function BMIResult({BMI, Message}){
+function BMIResult({BMI, Message, Color}){
     return(
         <div className="result">
            <h2>BMI: {BMI}</h2>
-            <p>Which is {Message}</p>
+            <p style={{ color: Color }}>Which is {Message}</p>
         </div>
     );
 }
