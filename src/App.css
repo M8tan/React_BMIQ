@@ -5,7 +5,9 @@ header {
   font-size: 30px;
   font-weight: bold;
 }
-
+body {
+  background-color: #333;
+}
 /* Make the card centered and styled */
 .bmi-card {
   max-width: 300px;
@@ -69,7 +71,6 @@ header {
   background-color: #0078d7;
   color: white;
   border: none;
-  border-radius: 6px;
   padding: 0.6rem 1.2rem;
   cursor: pointer;
   font-size: 1rem;
@@ -79,6 +80,7 @@ header {
 .ButtonZ:hover {
   background-color: #005fa3;
   color: #b4d9f7;
+  border-radius: 6px;
 }
 
 .ButtonZ.reset {
