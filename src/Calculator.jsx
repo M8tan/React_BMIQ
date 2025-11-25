@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Calculator( {onCalculate, onReset}){
+function Calculator( {onCalculate, onReset, onGenderSelect, gender}){
     const [Weight, Set_Weight] = useState("")
     const [Height, Set_Height] = useState("")
     
@@ -19,11 +19,10 @@ function Calculator( {onCalculate, onReset}){
         <form id="Calculator_Form" className="bmi-card" onSubmit={HandleSubmit}>
             <div className="Inputz">
                 <div className="Genderz">
-                <label>I am a:
-                <label><input type="radio" name="gender" value="male"></input>Male</label>
-                <label><input type="radio" name="gender" value="male"></input>Female</label>
-                <label><input type="radio" name="gender" value="male"></input>Else</label>
-                </label>
+                <span>I am a:</span>
+                <label style={{cursor:"pointer"}}><input onChange={(e) => onGenderSelect(e.target.value)} style={{cursor:"pointer"}} type="radio" name="gender" value="male" checked={gender === "male"}></input>Male</label>
+                <label style={{cursor:"pointer"}}><input onChange={(e) => onGenderSelect(e.target.value)} style={{cursor:"pointer"}} type="radio" name="gender" value="female" checked={gender === "female"}></input>Female</label>
+                
                 </div>
                 
                 <div className="input-group">
@@ -36,7 +35,7 @@ function Calculator( {onCalculate, onReset}){
                 </div>
             </div>
             <div className="buttons">
-                <button type="submit" onClick={HandleSubmit} className="ButtonZ">Calculate :)</button>
+                <button type="submit" onClick={HandleSubmit} className="ButtonZ">Calculate</button>
                 <button type="button" onClick={HandleReset} className="ButtonZ reset">Reset</button>
             </div>
         </form>
@@ -45,5 +44,3 @@ function Calculator( {onCalculate, onReset}){
     )
 }
 export default Calculator;
-
-// {Calculate_BMI(document.getElementById("Weight"), document.getElementById("Height"))}
