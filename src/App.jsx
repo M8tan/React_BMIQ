@@ -32,16 +32,13 @@ function App() {
     else {Set_Message("FatassM"); Set_Color("Red");}
   }
   if (Gender === "female"){
-    if (BMIValue < 18.5) {Set_Message("LowF"); Set_Color("Blue");}
+    if (BMIValue < 18) {Set_Message("LowF"); Set_Color("Blue");}
     else if (BMIValue < 25) {Set_Message("FineF"); Set_Color("Green");}
     else if (BMIValue < 30) {Set_Message("HighF"); Set_Color("Orange");}
     else {Set_Message("FatassF"); Set_Color("Red");}
   }
   }
-  
 
-  
-  
 const Reset_BMI = () => {
   Set_BMI(null);
   Set_Message("");
