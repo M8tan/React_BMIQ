@@ -4,7 +4,7 @@ import BMIResult from "./BMIResult.jsx"
 import Title from "./Title.jsx"
 import "./App.css"
 
-
+//צריך להוסיף הערות - מה לעשות עם כל ציון וכו
 function App() {
   const [BMI, Set_BMI] = useState(null)
   const [Message, Set_Message] = useState("")
@@ -60,4 +60,4 @@ const Reset_BMI = () => {
   )
 }
 
-export default App
+export default App;
