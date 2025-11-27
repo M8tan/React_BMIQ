@@ -43,7 +43,7 @@ const Reset_BMI = () => {
   Set_BMI(null);
   Set_Message("");
   Set_Color("");
-  Set_Gender(null)
+  Set_Gender(null);
 }
     
   return(
