@@ -59,6 +59,4 @@ const Reset_BMI = () => {
     </>
   )
 }
-
-
 export default App;
